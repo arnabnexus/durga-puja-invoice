@@ -73,11 +73,11 @@ tr.tot td{font-family:Cinzel,serif;font-weight:700;font-size:16px;color:var(--ma
 
 @media (max-width:640px){.g{grid-template-columns:1fr}.item{grid-template-columns:1fr 110px 38px}}
 @media print{
- @page{size:A4;margin:0}
- body{background:none}
+ @page{size:A4;margin:6mm}
+ html,body{margin:0;background:#fff}
  #formView,.tb,.bar{display:none!important}
  .sheetwrap{padding:0;overflow:visible}
- .inv{box-shadow:none;margin:0;width:210mm;height:297mm;min-height:0}
+ .inv{box-shadow:none;margin:0 auto;width:198mm;height:284mm;min-height:0;overflow:hidden;break-after:avoid;page-break-after:avoid}
 }
 </style>
 </head>
@@ -117,7 +117,7 @@ tr.tot td{font-family:Cinzel,serif;font-weight:700;font-size:16px;color:var(--ma
     <label class="full">Towards (e.g., specific event category)<input id="towards" placeholder="e.g. Durga Puja 2026 – Gold Sponsor"></label>
     <label>Proposed Payment Mode
      <select id="mode"><option>NEFT</option><option>RTGS</option><option>IMPS</option><option>UPI</option><option>Cheque</option><option>NEFT / Cheque</option></select></label>
-    <label>Please pay within (days)<input id="days" type="number" min="1" value="7"></label>
+    <label>Please pay within (days)<input id="days" type="text" value="7" required pattern="[0-9]+|[Nn]/?[Aa]" title="Enter a number of days, or N/A" placeholder="e.g. 7 or N/A"></label>
    </div>
   </fieldset>
 
@@ -197,7 +197,7 @@ $("sample").onclick=()=>{
  $("invNo").value=ORG.prefix+"001";$("sName").value="Sunrise Interiors Pvt. Ltd.";$("sContact").value="Mr. Rakesh Sharma";
  $("sGst").value="29ABCDE1234F1Z5";$("sAddr").value="12, Residency Road, Bengaluru – 560025";
  $("items").innerHTML="";addItem("Gold Sponsorship – Durga Puja 2026 (Main Pandal Branding)","50000");addItem("Stage Banner & Backdrop Branding","15000");addItem("Bhog / Prasad Sponsorship – Ashtami","10000");
- $("tax").value="13500";$("towards").value="Durga Puja 2026 – Gold Sponsor Package";$("mode").value="NEFT / Cheque";$("days").value=7;
+ $("tax").value="13500";$("towards").value="Durga Puja 2026 – Gold Sponsor Package";$("mode").value="NEFT / Cheque";$("days").value="7";
  $("bank").value="State Bank of India, Concorde Auriga Branch";$("acName").value="CA Durgutsav and Navratri Samiti";$("acNo").value="00000012345678901";$("ifsc").value="SBIN0000000";calc();
 };
 $("reset").onclick=()=>{$("f").reset();init()};
@@ -207,8 +207,8 @@ const row=(k,v)=>`<div class="row"><span class="k">${k}</span>:<span class="v">$
 function render(){
  const it=items(),[sub,tax,tot]=calc();
  const dt=new Date($("date").value+"T00:00:00").toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"});
+ const dv=$("days").value.trim().toUpperCase().replace(/^NA$/,"N/A"),payLine=/^\d+$/.test(dv)?`Please make payment within <b>${dv}</b> days. Thank you.`:"Thank you.";
  let rows=it.map((x,i)=>`<tr><td class="n">${i+1}.</td><td>${esc(x.d)}</td><td class="m">${x.a?inr(x.a):""}</td></tr>`).join("");
- for(let i=it.length;i<4;i++)rows+=`<tr class="blank"><td class="n">${i+1}.</td><td></td><td></td></tr>`;
  $("inv").innerHTML=`
  <span class="cn a">❖</span><span class="cn b">❖</span><span class="cn c">❖</span><span class="cn d">❖</span>
  <div class="hd"><img src="${ORG.logo}" alt="Logo"><div><h1>CA DURGUTSAV AND NAVRATRI SAMITI</h1><p>${esc(ORG.tag)}</p></div></div>
@@ -225,7 +225,7 @@ function render(){
  <div style="margin-top:3mm">${row("Towards",$("towards").value)}${row("Proposed Payment Mode",$("mode").value)}</div>
  <div class="bank"><div class="sec">Bank Details for Payment</div>
   ${row("Bank Name",$("bank").value)}${row("Account Name",$("acName").value)}${row("Account No.",$("acNo").value)}${row("IFSC Code",$("ifsc").value.toUpperCase())}</div>
- <p class="thx">We look forward to your valuable sponsorship support for the success of our event.<br>Please make payment within <b>${esc($("days").value||"___")}</b> days. Thank you.</p>
+ <p class="thx">We look forward to your valuable sponsorship support for the success of our event.<br>${payLine}</p>
  <div class="ft"><div><div>Reg. No. : <b>${ORG.reg}</b></div><div>Pan No. : <b>${ORG.pan}</b></div></div>
   <div class="sig">Authorized Signature<i>(Place for Official Stamp)</i></div></div>`;
 }
