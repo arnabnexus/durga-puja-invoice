@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CA Durgutsav & Navratri Samiti – Sponsorship Invoice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#5e0f1b;--maroon2:#7a1a28;--gold:#d49a2a;--rose:#c79aa0;--cream:#fdf7e8;--paper:#fffdf6;--ink:#3a1a1f;--line:#8a4b52}
+*{box-sizing:border-box}
+body{margin:0;background:#efe4d0;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:18px}
+h1,h2,.cin{font-family:Cinzel,Georgia,serif}
+.bar{background:var(--maroon);color:#f7e7c4;padding:14px 20px;display:flex;align-items:center;gap:14px;border-bottom:4px solid var(--gold)}
+.bar img{width:54px;height:54px;border-radius:50%;background:#fff}
+.bar b{font-family:Cinzel,serif;letter-spacing:.04em;font-size:18px;display:block}
+.bar span{font-size:15px;opacity:.85}
+.wrap{max-width:860px;margin:0 auto;padding:18px}
+fieldset{border:1.5px solid var(--gold);background:var(--paper);border-radius:10px;margin:0 0 16px;padding:14px 16px 16px}
+legend{font-family:Cinzel,serif;font-weight:700;color:var(--maroon);padding:0 8px;font-size:16px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g .full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:16px;color:var(--maroon)}
+input,select,textarea{width:100%;margin-top:3px;padding:9px 10px;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1px solid #cfb98f;border-radius:6px}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid rgba(212,154,42,.55);outline-offset:1px}
+.item{display:grid;grid-template-columns:1fr 150px 38px;gap:8px;margin-bottom:8px;align-items:end}
+button{font:inherit;font-weight:700;cursor:pointer;border-radius:8px;padding:10px 18px;border:1.5px solid var(--maroon);background:#fff;color:var(--maroon)}
+button.pri{background:var(--maroon);color:#fbeccb;border-color:var(--maroon)}
+button.pri:hover{background:var(--maroon2)}
+.x{padding:9px 0;width:38px;height:42px}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.note{font-size:15px;color:#7a5a40;margin:6px 0 0}
+.total{display:flex;justify-content:space-between;font-family:Cinzel,serif;font-weight:700;color:var(--maroon);margin-top:8px;font-size:18px}
+.tb{position:sticky;top:0;z-index:5;background:var(--maroon);padding:10px 18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;border-bottom:3px solid var(--gold)}
+.tb button{padding:8px 16px}
+.sheetwrap{overflow-x:auto;padding:20px 8px}
+
+/* ---------- INVOICE ---------- */
+.inv{width:210mm;min-height:297mm;margin:0 auto;background:var(--cream);position:relative;padding:12mm 13mm 10mm;border:2.5mm double var(--maroon);outline:.4mm solid var(--gold);outline-offset:-5.2mm;box-shadow:0 6px 24px rgba(60,20,20,.25);font-size:14.5px;line-height:1.35;display:flex;flex-direction:column;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.inv:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 58%,rgba(199,154,160,.16) 0 22%,transparent 23%),repeating-radial-gradient(circle at 50% 58%,transparent 0 14px,rgba(199,154,160,.10) 15px 16px);pointer-events:none;mask-image:radial-gradient(circle at 50% 58%,#000 0,#000 30%,transparent 55%);-webkit-mask-image:radial-gradient(circle at 50% 58%,#000 0,#000 30%,transparent 55%)}
+.inv>*{position:relative}
+.cn{position:absolute!important;color:var(--gold);font-size:22px;line-height:1}
+.cn.a{top:6mm;left:6mm}.cn.b{top:6mm;right:6mm}.cn.c{bottom:6mm;left:6mm}.cn.d{bottom:6mm;right:6mm}
+.hd{display:flex;align-items:center;gap:6mm}
+.hd img{width:39mm;height:39mm;object-fit:contain;flex:none}
+.hd h1{margin:0;font-size:27px;line-height:1.15;color:var(--maroon);letter-spacing:.02em}
+.hd p{margin:6px 0 0;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:#6a3a40}
+.rib{margin:3mm auto 4mm;width:78%;text-align:center;background:linear-gradient(var(--maroon2),var(--maroon));color:#fbeccb;font-family:Cinzel,serif;font-weight:700;font-size:20px;letter-spacing:.05em;padding:7px 0;border:1.5px solid var(--gold);border-radius:5px;box-shadow:0 0 0 2px var(--maroon)}
+.meta{display:flex;justify-content:flex-end;gap:10mm;font-size:16px;margin-bottom:2mm}
+.meta u,.row u{text-decoration:none;border-bottom:1px solid var(--ink);display:inline-block;min-width:36mm;padding:0 4px;font-weight:600}
+.sec{font-family:Cinzel,serif;font-weight:700;color:var(--maroon);font-size:15px;margin:3mm 0 1mm}
+.row{display:flex;gap:6px;margin:3px 0;font-size:16px;align-items:baseline}
+.row .k{flex:none;width:44mm}
+.row .v{flex:1;border-bottom:1px solid var(--ink);min-height:1.35em;padding:0 4px;font-weight:600;white-space:pre-line}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{border:1px solid var(--ink);padding:5px 8px;vertical-align:top}
+th{font-family:Cinzel,serif;font-size:14px;color:var(--maroon);background:rgba(212,154,42,.12)}
+td.n{width:14mm;text-align:center}td.m{width:38mm;text-align:right;font-variant-numeric:tabular-nums}
+tr.blank td{height:8.5mm}
+td.l{text-align:right;border:0;border-left:1px solid var(--ink)}
+tr.tot td{font-family:Cinzel,serif;font-weight:700;font-size:16px;color:var(--maroon);border-top:2px solid var(--ink);background:rgba(212,154,42,.12)}
+.words{font-size:14.5px;font-style:italic;margin:2mm 0 0}
+.bank{border:1px solid var(--ink);padding:2mm 4mm 3mm;margin-top:2mm}
+.bank .sec{margin-top:0;margin-bottom:1mm}
+.bank .row .k{width:30mm}
+.thx{text-align:center;font-style:italic;font-size:15px;margin:5mm 0 0}
+.thx:before,.thx:after{content:" ❖ ";color:var(--gold);font-style:normal}
+.ft{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;padding-top:6mm}
+.ft b{font-family:Cinzel,serif;font-size:15px;color:var(--maroon)}
+.sig{width:60mm;text-align:center;border-top:1px solid var(--ink);padding-top:3px;font-size:14px}
+.sig i{display:block;font-size:13px}
+.hide{display:none}
+
+@media (max-width:640px){.g{grid-template-columns:1fr}.item{grid-template-columns:1fr 110px 38px}}
+@media print{
+ @page{size:A4;margin:0}
+ body{background:none}
+ #formView,.tb,.bar{display:none!important}
+ .sheetwrap{padding:0;overflow:visible}
+ .inv{box-shadow:none;margin:0;width:210mm;height:297mm;min-height:0}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ ENTRY FORM ============ -->
+<div id="formView">
+ <div class="bar"><img src="logo.jpg" alt="CA Durgutsav and Navratri Samiti logo"><div><b>Sponsorship Invoice Generator</b><span>Concorde Auriga Durga Puja – for the Treasurer</span></div></div>
+ <form class="wrap" id="f" autocomplete="off">
+  <fieldset><legend>Invoice</legend>
+   <div class="g">
+    <label>Invoice No.<input id="invNo" required></label>
+    <label>Date<input id="date" type="date" required></label>
+   </div>
+  </fieldset>
+
+  <fieldset><legend>Sponsor Details</legend>
+   <div class="g">
+    <label class="full">Sponsor Name / Company<input id="sName" required></label>
+    <label>Contact Person<input id="sContact"></label>
+    <label>GST No. (if applicable)<input id="sGst" style="text-transform:uppercase"></label>
+    <label class="full">Address<textarea id="sAddr" rows="2"></textarea></label>
+   </div>
+  </fieldset>
+
+  <fieldset><legend>Invoice Particulars</legend>
+   <div id="items"></div>
+   <button type="button" id="addItem">+ Add item</button>
+   <div class="g" style="margin-top:12px">
+    <label>Other Charges / Taxes (₹)<input id="tax" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0"></label>
+    <div class="total"><span>Total</span><span id="tot">₹ 0</span></div>
+   </div>
+  </fieldset>
+
+  <fieldset><legend>Payment</legend>
+   <div class="g">
+    <label class="full">Towards (e.g., specific event category)<input id="towards" placeholder="e.g. Durga Puja 2026 – Gold Sponsor"></label>
+    <label>Proposed Payment Mode
+     <select id="mode"><option>NEFT</option><option>RTGS</option><option>IMPS</option><option>UPI</option><option>Cheque</option><option>NEFT / Cheque</option></select></label>
+    <label>Please pay within (days)<input id="days" type="number" min="1" value="7"></label>
+   </div>
+  </fieldset>
+
+  <fieldset><legend>Bank Details for Payment</legend>
+   <div class="g">
+    <label>Bank Name<input id="bank"></label>
+    <label>Account Name<input id="acName"></label>
+    <label>Account No.<input id="acNo" inputmode="numeric"></label>
+    <label>IFSC Code<input id="ifsc" style="text-transform:uppercase"></label>
+   </div>
+   <p class="note">Bank details are remembered on this device after you generate an invoice, so you only type them once.</p>
+  </fieldset>
+
+  <div class="acts">
+   <button class="pri" type="submit">Generate invoice</button>
+   <button type="button" id="sample">Fill sample data</button>
+   <button type="button" id="reset">Clear form</button>
+  </div>
+ </form>
+</div>
+
+<!-- ============ INVOICE VIEW ============ -->
+<div id="invView" class="hide">
+ <div class="tb">
+  <button id="back">← Edit details</button>
+  <button class="pri" id="print" style="background:var(--gold);color:var(--maroon);border-color:var(--gold)">Save as PDF / Print</button>
+  <button id="newInv">New invoice</button>
+ </div>
+ <div class="sheetwrap"><div class="inv" id="inv"></div></div>
+</div>
+
+<script>
+/* ===== Society constants – edit here only ===== */
+const ORG={name:"CA Durgutsav and Navratri Samiti",tag:"Celebrating Culture. Spreading Devotion.",
+ reg:"DRB3/SOR/256/2026-2027",pan:"AAIAC3176A",logo:"logo.jpg",prefix:"CADN/2026-27/"};
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const inr=n=>Number(n||0).toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2});
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+/* Amount in words (Indian system) */
+function words(n){
+ n=Math.round(n*100);let r=Math.floor(n/100),p=n%100;
+ const a=["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"],
+ t=["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+ const two=x=>x<20?a[x]:t[Math.floor(x/10)]+(x%10?" "+a[x%10]:"");
+ const three=x=>(x>99?a[Math.floor(x/100)]+" Hundred"+(x%100?" ":""):"")+(x%100?two(x%100):"");
+ if(!r&&!p)return"Zero";
+ let o=[],c=Math.floor(r/1e7);r%=1e7;let l=Math.floor(r/1e5);r%=1e5;let th=Math.floor(r/1e3);r%=1e3;
+ if(c)o.push(three(c)+" Crore");if(l)o.push(two(l)+" Lakh");if(th)o.push(two(th)+" Thousand");if(r)o.push(three(r));
+ let s=o.join(" ")||"Zero";s+=" Rupees";if(p)s+=" and "+two(p)+" Paise";return s+" Only";
+}
+
+/* ----- line items ----- */
+function addItem(d="",a=""){
+ const div=document.createElement("div");div.className="item";
+ div.innerHTML=`<label>Description of Sponsorship<input class="d" value="${esc(d)}"></label>
+ <label>Amount (₹)<input class="a" type="number" min="0" step="0.01" inputmode="decimal" value="${esc(a)}"></label>
+ <button type="button" class="x" aria-label="Remove item">✕</button>`;
+ div.querySelector(".x").onclick=()=>{if($("items").children.length>1){div.remove();calc()}};
+ div.querySelector(".a").oninput=calc;$("items").appendChild(div);
+}
+const items=()=>[...document.querySelectorAll(".item")].map(i=>({d:i.querySelector(".d").value.trim(),a:parseFloat(i.querySelector(".a").value)||0})).filter(x=>x.d||x.a);
+function calc(){const s=items().reduce((t,x)=>t+x.a,0),x=parseFloat($("tax").value)||0;$("tot").textContent="₹ "+inr(s+x);return[s,x,s+x]}
+$("tax").oninput=calc;$("addItem").onclick=()=>addItem();
+
+/* ----- defaults ----- */
+const BANK=["bank","acName","acNo","ifsc"];
+function nextNo(){const n=(parseInt(store.get("cadn_last"))||0)+1;return ORG.prefix+String(n).padStart(3,"0")}
+function init(){
+ $("items").innerHTML="";addItem();addItem();
+ $("date").valueAsDate=new Date();$("invNo").value=nextNo();
+ BANK.forEach(k=>{const v=store.get("cadn_"+k);if(v)$(k).value=v});calc();
+}
+$("sample").onclick=()=>{
+ $("invNo").value=ORG.prefix+"001";$("sName").value="Sunrise Interiors Pvt. Ltd.";$("sContact").value="Mr. Rakesh Sharma";
+ $("sGst").value="29ABCDE1234F1Z5";$("sAddr").value="12, Residency Road, Bengaluru – 560025";
+ $("items").innerHTML="";addItem("Gold Sponsorship – Durga Puja 2026 (Main Pandal Branding)","50000");addItem("Stage Banner & Backdrop Branding","15000");addItem("Bhog / Prasad Sponsorship – Ashtami","10000");
+ $("tax").value="13500";$("towards").value="Durga Puja 2026 – Gold Sponsor Package";$("mode").value="NEFT / Cheque";$("days").value=7;
+ $("bank").value="State Bank of India, Concorde Auriga Branch";$("acName").value="CA Durgutsav and Navratri Samiti";$("acNo").value="00000012345678901";$("ifsc").value="SBIN0000000";calc();
+};
+$("reset").onclick=()=>{$("f").reset();init()};
+
+/* ----- render invoice ----- */
+const row=(k,v)=>`<div class="row"><span class="k">${k}</span>:<span class="v">${esc(v)}</span></div>`;
+function render(){
+ const it=items(),[sub,tax,tot]=calc();
+ const dt=new Date($("date").value+"T00:00:00").toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"});
+ let rows=it.map((x,i)=>`<tr><td class="n">${i+1}.</td><td>${esc(x.d)}</td><td class="m">${x.a?inr(x.a):""}</td></tr>`).join("");
+ for(let i=it.length;i<4;i++)rows+=`<tr class="blank"><td class="n">${i+1}.</td><td></td><td></td></tr>`;
+ $("inv").innerHTML=`
+ <span class="cn a">❖</span><span class="cn b">❖</span><span class="cn c">❖</span><span class="cn d">❖</span>
+ <div class="hd"><img src="${ORG.logo}" alt="Logo"><div><h1>CA DURGUTSAV AND NAVRATRI SAMITI</h1><p>${esc(ORG.tag)}</p></div></div>
+ <div class="rib">SPONSORSHIP INVOICE</div>
+ <div class="meta"><span>Invoice No. : <u>${esc($("invNo").value)}</u></span><span>Date : <u>${dt}</u></span></div>
+ <div class="sec">Sponsor Details:</div>
+ ${row("Sponsor Name / Company",$("sName").value)}${row("Contact Person",$("sContact").value)}${row("Address",$("sAddr").value)}${row("GST No. (if applicable)",$("sGst").value.toUpperCase())}
+ <div class="sec">Invoice Particulars:</div>
+ <table><tr><th style="width:14mm">S.No.</th><th>Description of Sponsorship</th><th style="width:38mm">Amount (₹)</th></tr>${rows}
+ <tr><td class="l" colspan="2">Sub-Total</td><td class="m">${inr(sub)}</td></tr>
+ <tr><td class="l" colspan="2">Other Charges / Taxes</td><td class="m">${tax?inr(tax):"–"}</td></tr>
+ <tr class="tot"><td colspan="2" style="text-align:right">Total Amount</td><td class="m">₹ ${inr(tot)}</td></tr></table>
+ <p class="words"><b>Amount in words:</b> ${words(tot)}</p>
+ <div style="margin-top:3mm">${row("Towards",$("towards").value)}${row("Proposed Payment Mode",$("mode").value)}</div>
+ <div class="bank"><div class="sec">Bank Details for Payment</div>
+  ${row("Bank Name",$("bank").value)}${row("Account Name",$("acName").value)}${row("Account No.",$("acNo").value)}${row("IFSC Code",$("ifsc").value.toUpperCase())}</div>
+ <p class="thx">We look forward to your valuable sponsorship support for the success of our event.<br>Please make payment within <b>${esc($("days").value||"___")}</b> days. Thank you.</p>
+ <div class="ft"><div><div>Reg. No. : <b>${ORG.reg}</b></div><div>Pan No. : <b>${ORG.pan}</b></div></div>
+  <div class="sig">Authorized Signature<i>(Place for Official Stamp)</i></div></div>`;
+}
+
+/* ----- navigation ----- */
+function show(inv){$("formView").classList.toggle("hide",inv);$("invView").classList.toggle("hide",!inv);window.scrollTo(0,0)}
+$("f").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!items().length){alert("Add at least one sponsorship item.");return}
+ BANK.forEach(k=>store.set("cadn_"+k,$(k).value));
+ const m=$("invNo").value.match(/(\d+)\s*$/);if(m)store.set("cadn_last",String(Math.max(parseInt(m[1]),parseInt(store.get("cadn_last"))||0)));
+ render();show(true);
+});
+$("back").onclick=()=>show(false);
+$("print").onclick=()=>{document.title="Invoice_"+$("invNo").value.replace(/[^\w-]+/g,"_")+"_"+$("sName").value.replace(/[^\w]+/g,"_");window.print()};
+$("newInv").onclick=()=>{$("f").reset();init();show(false)};
+init();
+if(location.hash==="#sample"){$("sample").click();$("f").requestSubmit();}
+</script>
+</body>
+</html>
